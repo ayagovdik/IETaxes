@@ -25,3 +25,17 @@ show_errors: 1
 # DO NOT EVER USE THIS FEATURE IN PRODUCTION 
 # OR TINY KITTENS SHALL DIE WITH LOTS OF SUFFERING
 auto_reload: 0
+
+plugins:
+
+  DBIC:
+    default:
+      schema_class: Model
+      connect_info:
+        - dbi:mysql:ietaxes
+        - root
+        - 123
+        -
+          RaiseError: 1
+          PrintError: 1
+          mysql_enable_utf8: 1
