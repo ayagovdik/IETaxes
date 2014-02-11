@@ -1,0 +1,33 @@
+<div class="table-responsive">
+	<table class="table table-hover table-striped tablesorter">
+		<thead>
+			<tr>
+				<th class="header">Code <i class="fa fa-sort"></i></th>
+				<th class="header">Name <i class="fa fa-sort"></i></th>
+				<th class="header">Symbol <i class="fa fa-sort"></i></th>
+				<th class="header">Sign <i class="fa fa-sort"></i></th>
+				<th class="header">Actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			[% IF currencies.size -%]
+  				[% FOREACH currency IN currencies -%]
+				<tr>
+					<td>[% currency.code %]</td>
+					<td>[% currency.name %]</td>
+					<td>[% currency.symbol %]</td>
+					<td>[% currency.sign %]</td>
+					<td>
+						<a class="btn btn-xs btn-default btn-currency-edit"><i class="fa fa-edit"></i></a>
+						<a class="btn btn-xs btn-danger btn-currency-remove" title="Delete"><i class="fa fa-trash-o"></i></a>
+					</td>
+				</tr>
+				[% END -%]
+			[% ELSE -%]
+				<tr>
+					<td colspan="4" class="no-data">No currencies added</td>
+				</tr>
+			[% END -%]
+		</tbody>
+	</table>
+</div>

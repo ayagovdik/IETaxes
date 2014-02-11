@@ -7,8 +7,4 @@ register 'model' => sub {
     return schema->resultset($_[0]);
 };
 
-register 'SmsHistory' => sub {
-    model('SmsHistory');
-};
-
 register_plugin;
